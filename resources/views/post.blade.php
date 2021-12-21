@@ -4,7 +4,7 @@
 
     <h3 class="mb-3">{{ $post->title }}</h2>
     
-    <p>By: Surya in 
+    <p>By: <a href="/authors/{{ $post->author->username }}" class="text-decoration-none">{{ $post->author->name }}</a> in 
         <a href="/categories/{{ $post->category['slug'] }}" class="text-decoration-none">
             {{ $post->category['name'] }}
         </a>
@@ -12,6 +12,6 @@
 
     {!! $post->body !!}
 
-    <a href="/posts">Kembali</a>
+    <a href="/posts" class="d-block mt-3">Back to posts</a>
 
 @endsection
