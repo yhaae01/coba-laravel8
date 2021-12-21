@@ -2,8 +2,14 @@
 
 @section('container')
 
-    <h2 class="mb-5">{{ $post->title }}</h2>
-    <p>By: Surya in <a href="/categories/{{ $post->category['slug'] }}" class="text-decoration-none">{{ $post->category['name'] }}</a></p>
+    <h3 class="mb-3">{{ $post->title }}</h2>
+    
+    <p>By: Surya in 
+        <a href="/categories/{{ $post->category['slug'] }}" class="text-decoration-none">
+            {{ $post->category['name'] }}
+        </a>
+    </p>
+
     {!! $post->body !!}
 
     <a href="/posts">Kembali</a>
