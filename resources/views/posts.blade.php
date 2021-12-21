@@ -2,7 +2,7 @@
 
 @section('container')
 
-<h2 class="mb-3">Halaman Blog</h2>
+<h2 class="mb-3">{{ $title }}</h2>
 
     @foreach ($posts as $post)
         <article class="mb-3 border-bottom pb-4">
@@ -11,7 +11,10 @@
             </h3>
             
             <p>
-                By: <a href="/authors/{{ $post->author->username }}" class="text-decoration-none">{{ $post->author->name }}</a> 
+                By: 
+                <a href="/authors/{{ $post->author->username }}" class="text-decoration-none">
+                    {{ $post->author->name }}
+                </a> 
                 in 
                 <a href="/categories/{{ $post->category->slug }}" class="text-decoration-none">
                     {{ $post->category->name }}
