@@ -9,15 +9,13 @@ use App\Http\Controllers\DashboardPostController;
 
 Route::get('/', function () {
     return view('home',[
-        'title'  => 'Home',
-        'active' => 'home'
+        'title'  => 'Home'
     ]);
 });
 
 Route::get('/about', function () {
     return view('about',[
         'title'  => 'About',
-        'active' => 'about',
         'name'   => 'Surya Intan Permana',
         'email'  => 'suryaintpermana@gmail.com',
         'image'  => 'image.png'
@@ -32,7 +30,6 @@ Route::get('/posts/{post:slug}', [PostController::class, 'show']);
 Route::get('/categories', function(){
     return view('categories', [
         'title'      => 'Post Categories',
-        'active'     => 'categories',
         'categories' => Category::all()
     ]);
 });
