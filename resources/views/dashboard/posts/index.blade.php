@@ -6,7 +6,14 @@
     <h1 class="h2">My Post</h1>
 </div>
 
-<div class="table-responsive col-lg-8">
+<div class="table-responsive col-lg-9">
+    <a href="/dashboard/posts/create" class="btn btn-primary btn-sm mb-3"><i class="bi bi-plus-circle"></i> Add new post</a>
+    @if (session()->has('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        {{ session('success') }}
+    </div>
+    @endif
     <table class="table table-striped table-sm">
         <thead>
         <tr>
@@ -24,8 +31,12 @@
                 <td>{{ $post->category->name }}</td>
                 <td>
                     <a href="/dashboard/posts/{{ $post->slug }}" class="badge bg-info"><i class="bi bi-eye"></i></a>
-                    <a href="" class="badge bg-warning"><i class="bi bi-pencil-square"></i></a>
-                    <a href="" class="badge bg-danger"><i class="bi bi-trash"></i></a>
+                    <a href="/dashboard/posts/{{ $post->slug }}/edit" class="badge bg-warning"><i class="bi bi-pencil-square"></i></a>
+                    <form action="/dashboard/posts/{{ $post->slug }}" method="post" class="d-inline">
+                        @method('delete')
+                        @csrf
+                        <button type="submit" class="badge bg-danger border-0" onclick="return confirm('Are you sure?')"><i class="bi bi-trash"></i></button>
+                    </form>
                 </td>
             </tr>
             @endforeach
