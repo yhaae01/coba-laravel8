@@ -10,7 +10,7 @@
                 <p>
                     By: 
                     <a href="/posts?author={{ $post->author->username }}" class="text-decoration-none">
-                        {{ $post->author->name }}
+                        {{ ucwords($post->author->name) }}
                     </a> 
                     in 
                     <a href="/posts?category={{ $post->category['slug'] }}" class="text-decoration-none">

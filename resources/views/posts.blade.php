@@ -32,7 +32,7 @@
                     <small class="text-muted">
                         By: 
                         <a href="/posts?author={{ $posts[0]->author->username }}" class="text-decoration-none">
-                            {{ $posts[0]->author->name }}
+                            {{ ucwords($posts[0]->author->name) }}
                         </a> 
                         in 
                         <a href="/posts?category={{ $posts[0]->category->slug }}" class="text-decoration-none">
@@ -60,7 +60,7 @@
                         <small class="text-muted">
                             By: 
                             <a href="/posts?author={{ $post->author->username }}" class="text-decoration-none">
-                                {{ $post->author->name }}
+                                {{ ucwords($post->author->name) }}
                             </a> 
                             {{ $post->created_at->diffForHumans() }}
                         </small>
