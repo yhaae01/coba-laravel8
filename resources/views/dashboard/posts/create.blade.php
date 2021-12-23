@@ -7,7 +7,7 @@
     </div>
 
     <div class="col-lg-8">
-        <form action="/dashboard/posts" method="POST">
+        <form action="/dashboard/posts" method="POST" enctype="multipart/form-data" class="mb-4">
             @csrf
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
@@ -41,6 +41,15 @@
                 </select>
             </div>
             <div class="mb-3">
+                <label for="image" class="form-label">Post Image</label>
+                <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image">
+                @error('image')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
+            </div>
+            <div class="mb-3">
                 <label for="body" class="form-label">Body</label>
                 @error('body')
                     <small class="text-danger d-block mb-2">{{ $message }}</small>
@@ -48,7 +57,7 @@
                 <input id="body" type="hidden" name="body" value="{{ old('body') }}">
                 <trix-editor input="body"></trix-editor>
             </div>
-            <button type="submit" class="btn btn-primary btn-sm mb-4"><i class="bi bi-plus-circle"></i> Save</button>
+            <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-plus-circle"></i> Save</button>
         </form>
     </div>
 
