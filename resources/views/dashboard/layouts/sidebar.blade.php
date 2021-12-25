@@ -3,13 +3,13 @@
         <ul class="nav flex-column">
             <li class="nav-item">
                 <a class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}" aria-current="page" href="/dashboard">
-                    <i class="bi bi-house-door"></i>
+                    <i class="fas fa-home"></i>
                     Dashboard
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {{ Request::is('dashboard/posts*') ? 'active' : '' }}" href="/dashboard/posts">
-                    <i class="bi bi-file-earmark-text"></i>
+                    <i class="fas fa-archive"></i>
                     My Post
                 </a>
             </li>
@@ -20,7 +20,7 @@
         <ul class="nav flex-column">
             <li class="nav-item">
                 <a class="nav-link {{ Request::is('dashboard/categories*') ? 'active' : '' }}" href="/dashboard/categories">
-                    <i class="bi bi-bookmark-plus"></i>
+                    <i class="fas fa-bookmark"></i>
                     Post Categories
                 </a>
             </li>

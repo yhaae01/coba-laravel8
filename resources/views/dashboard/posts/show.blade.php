@@ -6,7 +6,7 @@
         <div class="row my-4">
             <div class="col-lg-8">
                 <h3 class="mb-3">{{ $post->title }}</h2>
-                <a href="/dashboard/posts" class="btn btn-success btn-sm"><i class="bi bi-arrow-left"></i> Back to My Post</a>
+                <a href="/dashboard/posts" class="btn btn-success btn-sm"><i class="fas fa-arrow-circle-left"></i> Back to My Post</a>
                 
                 @if ($post->image)
                 <div style="max-height: 350px; overflow: hidden">

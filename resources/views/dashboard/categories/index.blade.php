@@ -7,7 +7,7 @@
 </div>
 
 <div class="table-responsive col-lg-5">
-    <a href="/dashboard/categories/create" class="btn btn-primary btn-sm mb-3"><i class="bi bi-plus-circle"></i> Add new category</a>
+    <a href="/dashboard/categories/create" class="btn btn-primary btn-sm mb-3"><i class="fas fa-plus-circle"></i> Add new category</a>
     @if (session()->has('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -28,12 +28,12 @@
                 <td>{{ $loop->iteration }}</td>
                 <td>{{ $category->name }}</td>
                 <td>
-                    <a href="/dashboard/categories/{{ $category->slug }}" class="badge bg-info"><i class="bi bi-eye"></i></a>
-                    <a href="/dashboard/categories/{{ $category->slug }}/edit" class="badge bg-warning"><i class="bi bi-pencil-square"></i></a>
+                    <a href="/dashboard/categories/{{ $category->slug }}" class="badge bg-info"><i class="fas fa-eye"></i></a>
+                    <a href="/dashboard/categories/{{ $category->slug }}/edit" class="badge bg-warning"><i class="fas fa-edit"></i></a>
                     <form action="/dashboard/categories/{{ $category->slug }}" method="category" class="d-inline">
                         @method('delete')
                         @csrf
-                        <button type="submit" class="badge bg-danger border-0" onclick="return confirm('Are you sure?')"><i class="bi bi-trash"></i></button>
+                        <button type="submit" class="badge bg-danger border-0" onclick="return confirm('Are you sure?')"><i class="fas fa-trash"></i></button>
                     </form>
                 </td>
             </tr>

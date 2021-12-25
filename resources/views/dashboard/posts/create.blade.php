@@ -58,7 +58,7 @@
                 <input id="body" type="hidden" name="body" value="{{ old('body') }}">
                 <trix-editor input="body"></trix-editor>
             </div>
-            <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-plus-circle"></i> Save</button>
+            <button type="submit" class="btn btn-primary btn-sm"><i class="fas fa-save"></i> Save</button>
         </form>
     </div>
 

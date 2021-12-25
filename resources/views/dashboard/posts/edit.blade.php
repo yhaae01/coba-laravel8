@@ -64,7 +64,7 @@
                 <input id="body" type="hidden" name="body" value="{{ old('body', $post->body) }}">
                 <trix-editor input="body"></trix-editor>
             </div>
-            <button type="submit" class="btn btn-primary btn-sm mb-4"><i class="bi bi-check2"></i> Save</button>
+            <button type="submit" class="btn btn-primary btn-sm mb-4"><i class="fas fa-save"></i> Save</button>
         </form>
     </div>
 

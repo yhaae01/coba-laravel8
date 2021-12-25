@@ -7,12 +7,11 @@
         <title>Dashboard</title>    
 
         <!-- Bootstrap core CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
         <!-- Custom styles for this template -->
         <link href="/css/dashboard.css" rel="stylesheet">
-
+        {{-- Font Awesome --}}
+        <link rel="stylesheet" href="/vendor/fontawesome/css/all.min.css">
         {{-- Trix Editor --}}
         <link rel="stylesheet" type="text/css" href="/css/trix.css">
         <script type="text/javascript" src="/js/trix.js"></script>
@@ -41,7 +40,9 @@
         </div>
     </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        <script src="/js/dashboard"></script>
+        <script src="/js/bootstrap.bundle.min.js"></script>
+        <script src="/js/dashboard.js"></script>
+        <script src="/vendor/fontawesome/js/all.min.js"></script>
+
     </body>
 </html>

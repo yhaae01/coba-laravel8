@@ -3,12 +3,12 @@
     <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+    {{-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> --}}
     <div class="navbar-nav">
         <div class="nav-item text-nowrap">
             <form action="/logout" method="POST">
                 @csrf
-                <button type="submit" class="nav-link px-3 bg-dark border-0"><i class="bi bi-box-arrow-right"></i> Logout</button>
+                <button type="submit" class="nav-link px-3 bg-dark border-0"><i class="fas fa-sign-out-alt"></i> Logout</button>
             </form>
         </div>
     </div>
