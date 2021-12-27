@@ -28,9 +28,8 @@
                 <td>{{ $loop->iteration }}</td>
                 <td>{{ $category->name }}</td>
                 <td>
-                    <a href="/dashboard/categories/{{ $category->slug }}" class="badge bg-info"><i class="fas fa-eye"></i></a>
-                    <a href="/dashboard/categories/{{ $category->slug }}/edit" class="badge bg-warning"><i class="fas fa-edit"></i></a>
-                    <form action="/dashboard/categories/{{ $category->slug }}" method="category" class="d-inline">
+                    <a href="/dashboard/categories/{{ $category->id }}/edit" class="badge bg-warning"><i class="fas fa-edit"></i></a>
+                    <form action="/dashboard/categories/{{ $category->id }}" method="post" class="d-inline">
                         @method('delete')
                         @csrf
                         <button type="submit" class="badge bg-danger border-0" onclick="return confirm('Are you sure?')"><i class="fas fa-trash"></i></button>
