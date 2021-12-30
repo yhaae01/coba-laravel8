@@ -10,9 +10,6 @@
                     <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="/about">About</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link {{ Request::is('posts') ? 'active' : '' }}" href="/posts">Blog</a>
                 </li>
                 <li class="nav-item">

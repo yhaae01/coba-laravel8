@@ -14,15 +14,6 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/about', function () {
-    return view('about',[
-        'title'  => 'About',
-        'name'   => 'Surya Intan Permana',
-        'email'  => 'suryaintpermana@gmail.com',
-        'image'  => 'image.png'
-    ]);
-});
-
 Route::get('/posts', [PostController::class, 'index']);
 
 // Single post
